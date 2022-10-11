@@ -7,6 +7,9 @@ module.exports = {
         primary:{
           DEFAULT:"#081158"
         }
+      },
+      fontFamily:{
+        "permanentmarker":"Permanent Marker"
       }
     },
   },

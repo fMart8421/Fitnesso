@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Showcase from "../../components/Home";
 
 const Home = () => {
-  return (
-    <div>Home</div>
-  )
-}
+    return (
+        <section className="my-16">
+            <Showcase></Showcase>
+        </section>
+    );
+};
 
-export default Home
+export default Home;

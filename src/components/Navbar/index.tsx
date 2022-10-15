@@ -4,7 +4,7 @@ import Button from "../Button";
 
 const Navbar = () => {
     return (
-        <header className="flex justify-between items-center py-4 my-2 px-8 sticky top-0 z-10 bg-[#eef0f4]/50">
+        <header className="flex justify-between items-center py-6 px-8 sticky top-0 z-10 bg-slate-100/50">
             <button>
                 <img
                     className="h-[30px]"

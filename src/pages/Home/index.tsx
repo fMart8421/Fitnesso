@@ -1,18 +1,13 @@
 import React from "react";
 import Button from "../../components/Button";
 import FeatureList from "../../components/Home/FeatureList";
-import ProductList from "../../components/Home/ProductList";
+import ProductList from "../../components/ProductList";
 import Showcase from "../../components/Home/Showcase";
 
 import classes from "./index.module.css";
-import {
-    features,
-    freeProducts,
-    instaRols1,
-    instaRols2,
-    premiumProducts,
-    socials,
-} from "./info";
+import { features, freeProducts, premiumProducts } from "./info";
+import FreeMealPlan from "../../components/FreeMealPlan";
+import Socials from "../../components/Socials";
 
 const Home = () => {
     return (
@@ -134,37 +129,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <section
-                className="relative py-32 px-10"
-                style={{
-                    backgroundImage:
-                        "url(https://uploads-ssl.webflow.com/5e80894f63c557e083ed96b4/5e8318706203833a1bd11fad_logan-weaver-pD5kSwtNgMc-unsplash.jpg)",
-                    backgroundAttachment: "fixed",
-                    backgroundPosition: "center center",
-                }}
-            >
-                <div className="bg-primary-lighter py-16 flex flex-col justify-center items-center rounded-lg">
-                    <h1 className="font-semibold text-6xl my-4">
-                        Get our free meal plan
-                    </h1>
-                    <h3 className="text-lg max-w-[50%] text-center my-4">
-                        Signup to our newsletter to get a free 30 day meal plan.
-                        You will receive all guidance on what to eat, how to
-                        cook and how much to eat.
-                    </h3>
-                    <form className="grid grid-cols-3 gap-4 my-4 w-full px-16">
-                        <input
-                            className="bg-primary-light px-8 py-4 rounded-lg placeholder:text-primary outline-none"
-                            placeholder="Full Name"
-                        ></input>
-                        <input
-                            className="bg-primary-light px-8 py-4 rounded-lg placeholder:text-primary outline-none"
-                            placeholder="Email"
-                        ></input>
-                        <Button text="signup" />
-                    </form>
-                </div>
-            </section>
+            <FreeMealPlan />
             <section className="mx-10 relative my-32 grid grid-col-3">
                 <div className="w-[60%] col-span-3 justify-self-center text-center my-16">
                     <h1 className="text-6xl font-semibold">
@@ -202,38 +167,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <section
-                className={`relative bg-slate-100 text-white py-48 items-center overflow-x-hidden overflow-y-hidden`}
-            >
-                <div
-                    className={`absolute w-[150vw] top-1/2 -translate-y-1/2 py-24 bg-[#ec8675] z-10 ${classes["salmon-stripe"]} flex justify-center -translate-x-[25vw]`}
-                >
-                    <div className="flex justify-center gap-16 items-center w-[100vw]">
-                        {socials.map((social)=>(<p className="text-3xl font-semibold"><img className="h-[50px] inline-block pr-4" alt="" src={social.logo}></img>{social.title}</p>))}
-
-                    </div>
-                </div>
-                <div className="grid grid-cols-4 gap-x-32 w-[150%] translate-x-[20%]">
-                    {instaRols1.map((rol) => (
-                        <img
-                            className="h-[400px] w-[400px] rounded-xl object-cover"
-                            alt=""
-                            src={rol.image}
-                            key={rol.id}
-                        />
-                    ))}
-                </div>
-                <div className="grid grid-cols-4 gap-x-32 mt-16 w-[150%] -translate-x-[50%]">
-                    {instaRols2.map((rol) => (
-                        <img
-                            className="h-[400px] w-[400px] rounded-xl object-cover"
-                            alt=""
-                            src={rol.image}
-                            key={rol.id}
-                        />
-                    ))}
-                </div>
-            </section>
+            <Socials />
         </section>
     );
 };

@@ -20,7 +20,7 @@ const Navbar = () => {
                     <NavLink to="/free-workouts">Free Workouts</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/">Shop</NavLink>
+                    <NavLink to="/shop">Shop</NavLink>
                 </li>
                 <li>
                     <Button className="py-4" text="Book a call" />

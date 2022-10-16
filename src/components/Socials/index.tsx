@@ -1,5 +1,5 @@
 import React from "react";
-import { instaRols1, instaRols2, socials } from "../../pages/Home/info";
+import { instaRols1, instaRols2, socials } from "../../data/info";
 
 const Socials = () => {
     return (

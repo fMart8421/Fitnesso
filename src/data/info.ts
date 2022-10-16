@@ -1,6 +1,6 @@
-import { Post } from '../../models/Post';
-import { Feature } from './../../models/Feature';
-import { Product } from './../../models/Product';
+import { Post } from '../models/Post';
+import { Feature } from '../models/Feature';
+import { Product } from '../models/Product';
 export const freeProducts = [
     new Product(
         "The Perfect Outdoor Workout",
@@ -33,6 +33,42 @@ export const premiumProducts = [
         "$ 19.99 USD",
         "https://uploads-ssl.webflow.com/5e8303dd097a90ffd20e6b2f/5e831544e893cdaff056a2df_guillaume-bolduc-jWvUCKFIXbI-unsplash.jpg"
     ),
+    new Product(
+        "Shredded Meal Plan",
+        "30 days",
+        "$ 29.99 USD",
+        "https://uploads-ssl.webflow.com/5e8303dd097a90ffd20e6b2f/5e8314f167d71f19f7a0189f_logan-weaver-RBbwGEKBbD8-unsplash.jpg"
+    ),
+    new Product(
+        "High Intensity Training",
+        "7 days a week",
+        "$ 89.99 USD",
+        "https://uploads-ssl.webflow.com/5e8303dd097a90ffd20e6b2f/5e83149f3165d632eb81e21b_logan-weaver-brI7nj3kju8-unsplash.jpg"
+    ),
+];
+
+export const trainingProducts = [
+    new Product(
+        "Home Burn",
+        "3 days a week",
+        "$ 19.99 USD",
+        "https://uploads-ssl.webflow.com/5e8303dd097a90ffd20e6b2f/5e831544e893cdaff056a2df_guillaume-bolduc-jWvUCKFIXbI-unsplash.jpg"
+    ),
+    new Product(
+        "Shredded Meal Plan",
+        "30 days",
+        "$ 29.99 USD",
+        "https://uploads-ssl.webflow.com/5e8303dd097a90ffd20e6b2f/5e8314f167d71f19f7a0189f_logan-weaver-RBbwGEKBbD8-unsplash.jpg"
+    ),
+    new Product(
+        "Sculpt Your Body",
+        "5 days a week",
+        "$ 39.99 USD",
+        "https://uploads-ssl.webflow.com/5e80894f63c557e083ed96b4/5e80cc3929502f63a5ba28e2_hipcravo-DC5akQJyH4I-unsplash.jpg"
+    ),
+];
+
+export const nutritionProducts = [
     new Product(
         "Shredded Meal Plan",
         "30 days",

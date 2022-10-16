@@ -5,7 +5,7 @@ import ProductList from "../../components/ProductList";
 import Showcase from "../../components/Home/Showcase";
 
 import classes from "./index.module.css";
-import { features, freeProducts, premiumProducts } from "./info";
+import { features, freeProducts, premiumProducts } from "../../data/info";
 import FreeMealPlan from "../../components/FreeMealPlan";
 import Socials from "../../components/Socials";
 

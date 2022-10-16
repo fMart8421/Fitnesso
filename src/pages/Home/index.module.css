@@ -1,0 +1,13 @@
+.blue-stripe{
+    transform-origin: center;
+    rotate:-2deg;
+}
+.waves-svg{
+    transform-origin: center;
+    transform: rotateX(180deg) translateY(30%);
+}
+
+.salmon-stripe{
+    transform-origin: center;
+    rotate:2deg;
+}

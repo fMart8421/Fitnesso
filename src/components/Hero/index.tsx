@@ -5,6 +5,7 @@ const Hero: React.FC<{
     bannerColor: string;
     bannerTextColor: string;
     bannerText: string;
+    heroImage:string;
 }> = (props) => {
     const className = "relative " + (props.className ? props.className : "");
     return (
@@ -13,7 +14,7 @@ const Hero: React.FC<{
                 <img
                     alt=""
                     className="h-[600px] w-full object-cover rounded-xl"
-                    src="https://uploads-ssl.webflow.com/5e80894f63c557e083ed96b4/5e80cc36d802d646728a8558_guillaume-bolduc-hdBaq9W0hRY-unsplash.jpg"
+                    src={props.heroImage}
                 />
                 <img
                     className="absolute right-0 bottom-0 h-[350px]"

@@ -1,6 +1,42 @@
 import { Post } from '../models/Post';
 import { Feature } from '../models/Feature';
 import { Product } from '../models/Product';
+
+
+
+export const showcaseInfo = [
+    {
+        id:1,
+        title:"Your go to online fitness trainer and nutritionist.",
+        subtitle:"HI I'M SANDRA LYONS",
+        description:"After getting a bachelors in nutrition and fitness training I started working with people all around and changing their lives forever.",
+        buttonText:"online coaching",
+        image:"https://uploads-ssl.webflow.com/5e80894f63c557e083ed96b4/5e80cc36d802d646728a8558_guillaume-bolduc-hdBaq9W0hRY-unsplash.jpg",
+        imageText:"Sandra Lyons",
+    },
+    {
+        id:2,
+        title:"Premium online fitness classes & nutrition.",
+        subtitle:"MAKE A CHANGE TODAY",
+        description:"I've created these premium fitness classes for everyone starting from beginner to advanced level with an in depth FAQ to answer all doubts.",
+        buttonText:"Premium Classes",
+        image:"https://uploads-ssl.webflow.com/5e80894f63c557e083ed96b4/5e8318f6e893cd930956b324_logan-weaver-RBbwGEKBbD8-unsplash.jpg",
+        imageText:"Get Moving",
+    },
+    {
+        id:3,
+        title:"Transforming lifes with fitness & nutrition.",
+        subtitle:"MAKE A CHANGE TODAY",
+        description:"With free online classes people who don't have the time or money to afford a personal coach can make change their lives forever.",
+        buttonText:"free classes",
+        image:"https://uploads-ssl.webflow.com/5e80894f63c557e083ed96b4/5e8318706203833a1bd11fad_logan-weaver-pD5kSwtNgMc-unsplash.jpg",
+        imageText:"free classes",
+    },
+]
+
+
+
+
 export const freeProducts = [
     new Product(
         "The Perfect Outdoor Workout",
@@ -118,6 +154,7 @@ const user = {
 
 export const posts = [
     new Post(
+        "post1",
         user,
         "The 10 best exercises to do in your park",
         "",
@@ -125,6 +162,7 @@ export const posts = [
         "Training"
     ),
     new Post(
+        "post2",
         user,
         "Healthy breakfast ideas",
         "",
@@ -132,6 +170,7 @@ export const posts = [
         "Weight Loss"
     ),
     new Post(
+        "post3",
         user,
         "My life changing experience",
         "",

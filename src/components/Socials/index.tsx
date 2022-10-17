@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { instaRols1, instaRols2, socials } from "../../data/info";
 
 const Socials = () => {
+    const windowHeight = window.innerHeight;
+    const [translate, setTranslate] = useState(1);
+    const socialRef = useRef<HTMLElement>(null);
+
+    const getBarScale = useCallback(() => {
+        const socialY = socialRef.current?.getBoundingClientRect().y;
+        if (
+            socialY &&
+            socialY < windowHeight &&
+            socialY > -socialRef.current.offsetHeight / 2
+        ) {
+            console.log(socialY);
+            setTranslate(socialY*2 / windowHeight);
+        }
+    }, [windowHeight]);
+    useEffect(() => {
+        window.addEventListener("scroll", getBarScale);
+    }, [getBarScale]);
+    useEffect(()=>{
+        console.log(translate);
+    },[translate])
     return (
         <section
+            ref={socialRef}
             className={`relative bg-slate-100 text-white py-48 items-center overflow-x-hidden overflow-y-hidden z-0`}
         >
             <div
@@ -22,7 +44,12 @@ const Socials = () => {
                     ))}
                 </div>
             </div>
-            <div className="grid grid-cols-4 gap-x-32 w-[150%] translate-x-[20%]">
+            <div
+                className="grid grid-cols-4 gap-x-32 w-[150%]"
+                style={{
+                    transform: `translateX(${translate * 15}%)`,
+                }}
+            >
                 {instaRols1.map((rol) => (
                     <img
                         className="h-[400px] w-[400px] rounded-xl object-cover"
@@ -32,7 +59,12 @@ const Socials = () => {
                     />
                 ))}
             </div>
-            <div className="grid grid-cols-4 gap-x-32 mt-16 w-[150%] -translate-x-[50%]">
+            <div
+                className="grid grid-cols-4 gap-x-32 mt-16 w-[150%] ease-out"
+                style={{
+                    transform: `translateX(${-25 - translate * 15}%)`,
+                }}
+            >
                 {instaRols2.map((rol) => (
                     <img
                         className="h-[400px] w-[400px] rounded-xl object-cover"

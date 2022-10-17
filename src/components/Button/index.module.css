@@ -1,0 +1,32 @@
+.open {
+    height:0px;
+    width:0px;
+    margin:0px;
+    padding:0px;
+    animation: open 0.2s ease forwards;
+}
+.close {
+    height:1px;
+    width:10px;
+    margin:0px;
+    padding:0px;
+    animation: close 0.2s ease forwards;
+}
+
+@keyframes open {
+    from{ 
+        height:0px;
+        width:0px;
+    }
+    to {
+        height:1px;
+        width:10px;
+    }
+}
+
+@keyframes close {
+    to {
+        height:0px;
+        width:0px;
+    }
+}

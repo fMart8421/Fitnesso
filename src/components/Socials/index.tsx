@@ -20,9 +20,6 @@ const Socials = () => {
     useEffect(() => {
         window.addEventListener("scroll", getBarScale);
     }, [getBarScale]);
-    useEffect(()=>{
-        console.log(translate);
-    },[translate])
     return (
         <section
             ref={socialRef}
@@ -33,7 +30,7 @@ const Socials = () => {
             >
                 <div className="flex justify-center gap-16 items-center w-[100vw]">
                     {socials.map((social) => (
-                        <p className="text-3xl font-semibold">
+                        <p key={social.id} className="text-3xl font-semibold">
                             <img
                                 className="h-[50px] inline-block pr-4"
                                 alt=""

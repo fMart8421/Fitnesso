@@ -7,7 +7,7 @@ import { freeProducts } from "../../data/info";
 
 const FreeWorkouts = () => {
     return (
-        <section className="overflow-x-hidden bg-slate-100">
+        <section className="overflow-x-hidden bg-slate-100 pt-16">
             <Hero
                 heroImage="https://uploads-ssl.webflow.com/5e80894f63c557e083ed96b4/5e80cc36d802d646728a8558_guillaume-bolduc-hdBaq9W0hRY-unsplash.jpg"
                 className="py-24 mx-10"

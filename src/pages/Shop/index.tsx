@@ -44,7 +44,7 @@ const Shop = () => {
     };
 
     return (
-        <section className="overflow-x-hidden bg-slate-100">
+        <section className="overflow-x-hidden bg-slate-100 pt-16">
             <Hero
                 heroImage={category.image}
                 className="py-24 mx-10"

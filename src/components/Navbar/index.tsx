@@ -2,16 +2,23 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import Button from "../Button";
 
-const Navbar = () => {
+const Navbar:React.FC<{percentage:number}> = (props) => {
+    
     return (
-        <header className="flex justify-between items-center py-6 px-8 sticky top-0 z-10 bg-slate-100/50">
-            <button>
+        <header
+            className="flex justify-between items-center py-6 px-8 fixed top-0 z-10 w-full box-border"
+            style={{
+                background:`rgba(255,255,255,${Math.min(1-props.percentage,1)})`,
+                padding:`${1.5*props.percentage + 0.3}rem 2rem`
+            }}
+        >
+            <NavLink to="/">
                 <img
                     className="h-[30px]"
                     alt="Black Fitnesso Logo"
                     src="https://uploads-ssl.webflow.com/5e80894f63c557e083ed96b4/5e808ce7dc544553a7f1b1e4_Black.svg"
                 />
-            </button>
+            </NavLink>
             <ul className="flex gap-8 items-center">
                 <li>
                     <NavLink to="/about">About</NavLink>

@@ -1,5 +1,5 @@
 export class Product {
-    id: string;
+    id: number;
     name: string;
     duration: string;
     price: string;
@@ -11,7 +11,7 @@ export class Product {
         price: string,
         coverImage: string
     ) {
-        this.id = new Date().toISOString();
+        this.id = Math.random();
         this.name = name;
         this.coverImage = coverImage;
         this.duration = duration;
